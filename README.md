@@ -1,22 +1,59 @@
-# Python with Selenium library
+# Google Image Crawler
 
-## 1. Install selenium library if you don't have
+A Python Selenium script that automates Google Image Search to download images based on keywords.
 
-## 2. Move to selenium folder
+## Requirements
 
+- Python 3.x
+- Selenium library
+- Google Chrome browser
+- ChromeDriver (matching your Chrome version)
+
+## Installation
+
+### 1. Install Selenium library
+```bash
+pip install selenium
+```
+
+### 2. Move to selenium folder
+```bash
 cd selenium
+```
 
-## 3. Activate the virtual environment
-
+### 3. Activate the virtual environment
+```bash
 source bin/activate
+```
 
-## 4. Run Command
+**Windows:**
+```bash
+bin\activate
+```
 
-python downloadImgs.py --help
+## Usage
 
---keyword : keyword what you want to download
+### Basic Command
+```bash
+python downloadImgs.py --keyword="your search keyword"
+```
 
-example
+### Examples
+```bash
+# Using full option
 python downloadImgs.py --keyword="New York"
-OR
-python downloadImgs.py --k="New York"
+
+# Using shorthand
+python downloadImgs.py -k "cat"
+```
+
+### Options
+- `--keyword` or `-k`: Search keyword for images to download
+- `--help` or `-h`: Display help message
+
+## Output
+
+Images are saved in the `img/` folder with the format:
+```
+img/google_<keyword>_<number>.png
+```
